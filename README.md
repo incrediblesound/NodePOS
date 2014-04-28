@@ -47,5 +47,5 @@ pos(string, function (data) {
   console.log(data);
 })
 
-//[ { I: [ 'Pronoun' ] }, { love: [ 'Noun', 'Verb Transitive', 'Verb Intransitive' ] }, { to: [ 'Adverb', 'Preposition' ] }, { sing: [ 'Noun', 'Verb Transitive', 'Verb', 'Verb Intransitive' ] }, { in: [ 'Adjective', 'Noun', 'Adverb', 'Preposition' ] }, { the: [ 'Adverb', 'Definite Article' ] }, { dark: [ 'Adjective', 'Noun', 'Verb' ] } ]
+//[ { word: 'I', pos: [ 'Pronoun' ] }, { word: 'love', : [ 'Noun', 'Verb Transitive', 'Verb Intransitive' ] }, { word: 'to', pos: [ 'Adverb', 'Preposition' ] }, { word: 'sing', pos: [ 'Noun', 'Verb Transitive', 'Verb', 'Verb Intransitive' ] }, { word: 'in', pos: [ 'Adjective', 'Noun', 'Adverb', 'Preposition' ] }, { word: 'the', pos: [ 'Adverb', 'Definite Article' ] }, { word: 'dark', pos: [ 'Adjective', 'Noun', 'Verb' ] } ]
 ```
