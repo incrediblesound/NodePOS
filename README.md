@@ -11,7 +11,7 @@ The Functions
 The MOBYnounPhrase function uses a class in the p.o.s index called "noun phrases." These np's are groups of words, like criminal law, that taken together form a single noun. Because this class is special I created a unqiue function for it which scans every possible sequence of words in a sentence for matches in the noun phrase index.
 
 ```javascript
-var getNp = require('NodePOS').MOBYnounPhrase;
+var getNp = require('node-pos').MOBYnounPhrase;
 var string = 'I study criminal law';
 
 getNp(string, function (data) {
@@ -24,7 +24,7 @@ The findPhrases function is still embryonic. Phrases are a nebulous concept so t
 
 
 ```javascript
-var phrases = require('NodePOS').findPhrases;
+var phrases = require('node-pos').findPhrases;
 var string = "I love to sing in the dark";
 
 phrases(string, function (data) {
@@ -36,7 +36,7 @@ phrases(string, function (data) {
 The partsOfSpeech function takes a block of text and returns an array of arrays, one for each sentence, where each array contains a series of objects for each word in the sentence where the key is the word and the value is a list of parts of speech for that word. Further down the road I will try to add a predictive algorithm that can narrow down the p.o.s list.
 
 ```javascript
-var pos = require('NodePOS').partsOfSpeech;
+var pos = require('node-pos').partsOfSpeech;
 var string = "I love to sing in the dark";
 
 pos(string, function (data) {
