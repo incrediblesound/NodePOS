@@ -64,7 +64,7 @@ exports.partsOfSpeech = function(string, fn) {
 }
 
 function getLibrary(fn) {
-  fs.readFile('./posDic.js', 'Utf8', function (err, data) {
+  fs.readFile('posDic.js', 'Utf8', function (err, data) {
     data = data.toString();
     data = JSON.parse(data);
     return fn(data);
