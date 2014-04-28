@@ -3,19 +3,24 @@ var fs = require('fs');
 exports.MOBYnounPhrase = function(string, fn){
   getLibrary (function (library) {
     var results = [];
-    string = makeArray(string, ' ');
-    everyPossible(string, function(subset) {
-      var testString = "";
-      forEach(subset, function(word, i) {
-        if(i !== subset.length-1) {
-          testString = testString + word + ' ';
-        } else {
-          testString = testString + word;
+    sentences = makeArray(string, '.');
+    forEach(sentences, function(sentence) {
+      var current = [];
+      string = makeArray(sentence, ' ');
+      everyPossible(string, function(subset) {
+        var testString = "";
+        forEach(subset, function(word, i) {
+          if(i !== subset.length-1) {
+            testString = testString + word + ' ';
+          } else {
+            testString = testString + word;
+          }
+        })
+        if(library['h'].indexOf(testString) !== -1) {
+          current.push(testString);
         }
       })
-      if(library['h'].indexOf(testString) !== -1) {
-        results.push(testString);
-      }
+      if(current.length > 0) {results.push(current);}
     })
     return fn(results);
   })
@@ -64,7 +69,7 @@ exports.partsOfSpeech = function(string, fn) {
 }
 
 function getLibrary(fn) {
-  fs.readFile('./node_modules/NodePOS/posDic.js', 'Utf8', function (err, data) {
+  fs.readFile('./node_modules/node-pos/posDic.js', 'Utf8', function (err, data) {
     data = data.toString();
     data = JSON.parse(data);
     return fn(data);
