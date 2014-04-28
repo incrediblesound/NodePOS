@@ -1,9 +1,13 @@
-NodePOS
+node-pos
 =======
 
 A Node.js Module for Analyzing Parts of Speech
 
 I have been making a lot of apps recently that play with the Moby parts of speech index, so I figured I'd make a Node module that exposes the major functions I've been using. I am in the early stages here, so expect lots of updates and please e-mail me with suggestions or open issues if you have them.
+
+Install with npm:
+
+    npm install node-pos --save
 
 The Functions
 -------------
