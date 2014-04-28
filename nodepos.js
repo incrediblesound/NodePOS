@@ -49,11 +49,11 @@ exports.partsOfSpeech = function(string, fn) {
       var words = makeArray(sentence,' ');
       forEach(words, function (word) {
         word = noPunc(word);
-        data = {};
-        data[word] = getParts(word, library);
-        if(data[word].length === 0 && (word.match(/[A-Z]/))) {
+        data = {word: word, pos: []};
+        data.pos = getParts(word, library);
+        if(data.pos.length === 0 && (word.match(/[A-Z]/))) {
           wordB = word.toLowerCase();
-          data[word] = getParts(wordB, library);
+          data.pos = getParts(wordB, library);
         }
         current.push(data);
       })

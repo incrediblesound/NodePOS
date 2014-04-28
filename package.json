@@ -1,6 +1,6 @@
 {
-    "name": "NodePOS",
-    "version": "0.0.1",
+    "name": "node-pos",
+    "version": "0.0.2",
     "description": "Node.js module to analyze parts of speech",
     "main": "nodepos.js",
     "author": "James H. Edwards",

@@ -5,6 +5,6 @@ var phraseTypes = require('./nodepos.js').findPhrases;
 
 var string = 'I study geology in the bathroom';
 
-phraseTypes(string, function (data) {
+pos(string, function (data) {
 	console.log(data);
 })
