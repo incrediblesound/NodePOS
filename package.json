@@ -4,7 +4,7 @@
     "description": "Node.js module to analyze parts of speech",
     "main": "nodepos.js",
     "author": "James H. Edwards",
-    "keywords": ["parts of speech", "grammar", "text","analysis","English"],
+    "keywords": ["parts-of-speech", "grammar", "text","analysis","English"],
     "repository" : {
         "type": "git",
         "url": "https://github.com/incrediblesound/NodePOS"

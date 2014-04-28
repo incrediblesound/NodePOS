@@ -31,7 +31,7 @@ exports.findPhrases = function(string, fn) {
         var head = getParts(subSentence[0], library, true);
         var npVp = returnPhrase(head);
         console.log(npVp);
-        if(npVp) {
+        if(npVp && subSentence.length > 1) {
           results.push({phrase: subSentence, type: npVp});
         }
       })
